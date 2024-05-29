@@ -39,7 +39,7 @@ oauthlib==3.2.2
 openai==0.28.0
 openpyxl==3.1.2
 pandas==2.0.3
-pandas-stubs==2.2.2.240514
+pandas-stubs==2.0.3.230814
 pycryptodome==3.20.0
 pydantic==2.7.1
 pydantic_core==2.18.2
