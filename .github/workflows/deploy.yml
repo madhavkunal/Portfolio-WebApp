@@ -22,17 +22,14 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install pipenv
+        pipenv install --deploy
 
     - name: Run application
       env:
         FLASK_SECRET_KEY: ${{ secrets.FLASK_SECRET_KEY }}
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         MEDIUM_INTEGRATION_TOKEN: ${{ secrets.MEDIUM_INTEGRATION_TOKEN }}
-        COINBASE_API_KEY: ${{ secrets.COINBASE_API_KEY }}
-        COINBASE_API_SECRET: ${{ secrets.COINBASE_API_SECRET }}
-        COINBASE_CLIENT_ID: ${{ secrets.COINBASE_CLIENT_ID }}
-        COINBASE_CLIENT_SECRET: ${{ secrets.COINBASE_CLIENT_SECRET }}
         REDIRECT_URI: ${{ secrets.REDIRECT_URI }}
       run: |
         python server.py
