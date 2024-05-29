@@ -1,0 +1,20 @@
+<div class="hn-results">
+        {% for item in hn_combined %}
+        <div class="hn-item">
+                <div class="hn-title-row">
+                        <a href="{{ item.Link }}" target="_blank" rel="noopener noreferrer" class="hn-title">{{
+                                item.Title }}</a>
+                </div>
+                <div class="hn-details">
+                        {{ item.Points }} •
+                        {% if item.Comments_URL %}
+                        <a href="{{ item.Comments_URL }}" target="_blank" rel="noopener noreferrer"
+                                class="hn-comments">{{ item.Comments }} comments</a>
+                        {% else %}
+                        {{ item.Comments }} comments
+                        {% endif %}
+                        • {{ item.Posted }} • <span class="hn-url">{{ item.Link|urlhost }}</span>
+                </div>
+        </div>
+        {% endfor %}
+</div>

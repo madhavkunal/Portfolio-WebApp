@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+<!-- Header Section Begin -->
+<header class="header">
+    <div class="container">
+        <div class="row header__row">
+            <div class="col-lg-6 header__left">
+                <div class="header__nav">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li class="active"><a href="/portfolio">Portfolio</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-lg-6 header__right">
+                <div class="header__social">
+                    <div class="social-media-icons">
+                        <a href="https://www.linkedin.com/in/madhav-kunal/" class="linkedin" target="_blank"><i
+                                class="fab fa-linkedin"></i>LinkedIn</a>
+                        <a href="https://github.com/madhavkunal" class="github" target="_blank"><i
+                                class="fab fa-github"></i>GitHub</a>
+                        <a href="https://medium.com/@Madhav_Kunal" class="medium=" target="_blank"><i
+                                class="fab fa-medium"></i>Medium</a>
+                        <a href="mailto:madhavkunal27@gmail.com" class="gmail" target="_blank"><i
+                                class="fab fa-google"></i>Gmail</a>
+                        <a href="https://twitter.com/maddykutechno" class="twitter" target="_blank"><i
+                                class="fab fa-twitter"></i>Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End -->
+
+
+<!-- Portfolio Section Begin -->
+<section class="portfolio spad">
+    <div class="container">
+        <div class="portfolio-grid">
+
+            <!-- OpenAI ChatGPT Feature Area -->
+            <div class="project-item">
+                <img src="static/img/portfolio/openai.png" alt="OpenAI ChatGPT">
+                <h4 style="color:lightblue">ChatGPT-4o Portal</h4>
+                <p>Explore the capabilities of OpenAI's GPT-4 Omni with this advanced interactive platform, delivering
+                    articulate, insightful text-based responses across a diverse array of topics. GPT-4 Omni stands out
+                    with a 88.7% score on the Massive Multitask Language Understanding (MMLU) benchmark, evaluating over
+                    100 large language models, and supports a throughput of up to 10 million tokens per minute,
+                    significantly enhancing its processing speed and contextual relevance.</p>
+                <div class="openai-chat-container">
+                    <div class="chat-interface">
+                        <textarea id="userInput" placeholder="Message ChatGPT" rows="1"></textarea>
+                        <button id="sendButton" class="send-button">
+                            Send
+                            <img src="static/img/portfolio/chatgpt.webp" alt="ChatGPT Icon" class="chatgpt-icon">
+                        </button>
+                        <!-- <a href="https://github.com/yourusername/repository" target="_blank">
+                            <button class="github-button">GitHub <i class="fab fa-github"></i></button>
+                        </a> -->
+                        <!-- Button in ChatGPT modal -->
+                        <div id="chatLoader" class="loader">
+                            <img src="static/img/portfolio/loader.gif" alt="Loading...">
+                        </div>
+                    </div>
+                    <div id="responseArea" class="response-area"></div>
+                </div>
+            </div>
+
+            <!-- Hacker News Web Scraper Section -->
+            <div class="project-item" style="margin-left: 30px;">
+                <img src="static/img/portfolio/hn.png" alt="Hacker News Web Scraper">
+                <h4 style="color:orange">Hacker News Web Scraper</h4>
+                <p>This tool efficiently extracts and aggregates the highest-rated articles from Hacker News, curating
+                    them into a streamlined and user-friendly format. It enables users to not only view these top
+                    stories but also directly engage with comment threads, fostering deeper interaction within the
+                    Hacker News community by spotlighting trending discussions and insights.</p>
+                <div class="project-buttons">
+                    <button id="run-scraper" class="btn btn-success">Scrape <img src="static/img/portfolio/scrape.png"
+                            alt="Scrape Icon" class="scrape-icon"></button>
+                    <!-- <a href="https://github.com/yourusername/repository" target="_blank">
+                        <button class="hn-github-button">GitHub <i class="fab fa-github"></i></button>
+                    </a> -->
+                </div>
+                <div id="hnLoader" class="loader">
+                    <img src="static/img/portfolio/loader.gif" alt="Loading...">
+                </div>
+                <div id="scraper-results" class="hn-results">
+                    <!-- <img src="/static/img/portfolio/posts.png" alt="Posts" class="posts-icon"
+                        style="margin-bottom: -20px;"> -->
+                    <!-- Results will be dynamically inserted here -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Portfolio Section End -->
+{% endblock content %}
+
+{% block scripts %}
+<script>
+    // ChatGPT interaction
+    document.addEventListener('DOMContentLoaded', function () {
+        const sendButton = document.getElementById('sendButton');
+        const userInput = document.getElementById('userInput');
+        const responseArea = document.getElementById('responseArea');
+        const chatLoader = document.getElementById('chatLoader');
+
+        function autoResize() {
+            userInput.style.height = 'auto';
+            userInput.style.height = userInput.scrollHeight + 'px';
+            const maxHeight = 20 * 10; // Change '20' to your actual line height, '5' to desired max lines
+            if (userInput.scrollHeight > maxHeight) {
+                userInput.style.height = maxHeight + 'px';
+                userInput.style.overflowY = 'auto';
+            } else {
+                userInput.style.overflowY = 'hidden';
+            }
+        }
+
+        userInput.addEventListener('input', autoResize);
+        autoResize(); // Initialize on page load
+
+        sendButton.addEventListener('click', function () {
+            const question = userInput.value.trim();
+            if (!question) {
+                alert('Please enter a question.');
+                return;
+            }
+            chatLoader.classList.add('show'); // Show the loader
+            fetch('/api/openai', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ question: question })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        responseArea.innerHTML = `<p>${data.error}</p>`;
+                    } else {
+                        responseArea.innerHTML = `<p>${data.answer}</p>`;
+                        resizeResponseArea();
+                    }
+                    chatLoader.style.display = 'none';
+                })
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                    responseArea.innerHTML = '<p>Error sending request.</p>';
+                    chatLoader.style.display = 'none';
+                });
+        });
+
+        function resizeResponseArea() {
+            responseArea.style.height = 'auto';
+            responseArea.style.height = responseArea.scrollHeight + 'px';
+        }
+    });
+</script>
+
+
+<script>
+    // Hacker News scraper interaction
+    const runScraper = document.getElementById('run-scraper');
+    const hnLoader = document.getElementById('hnLoader');
+    const scraperResults = document.getElementById('scraper-results');
+
+    runScraper.addEventListener('click', function () {
+        hnLoader.classList.add('show'); // Show the loader
+        fetch('/hackernews-scraper', { method: 'POST' })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.error) {
+                    scraperResults.innerHTML = `<p>Error: ${data.error}</p>`;
+                } else {
+                    scraperResults.innerHTML = data.html;
+                }
+                hnLoader.classList.remove('show'); // Hide the loader after response
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                scraperResults.innerHTML = `<p>Error loading results: ${error.message}</p>`;
+                hnLoader.classList.remove('show'); // Ensure loader is hidden on error
+            });
+    });
+</script>
+
+
+
+{% endblock %}

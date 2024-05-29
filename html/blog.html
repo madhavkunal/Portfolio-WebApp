@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+<!-- Header Section Begin -->
+<header class="header">
+    <div class="container">
+        <div class="row header__row">
+            <div class="col-lg-6 header__left">
+                <div class="header__nav">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/portfolio">Portfolio</a></li>
+                            <li class="active"><a href="/blog">Blog</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-lg-6 header__right">
+                <div class="header__social">
+                    <div class="social-media-icons">
+                        <a href="https://www.linkedin.com/in/madhav-kunal/" class="linkedin" target="_blank"><i
+                                class="fab fa-linkedin"></i>LinkedIn</a>
+                        <a href="https://github.com/madhavkunal" class="github" target="_blank"><i
+                                class="fab fa-github"></i>GitHub</a>
+                        <a href="https://medium.com/@Madhav_Kunal" class="medium=" target="_blank"><i
+                                class="fab fa-medium"></i>Medium</a>
+                        <a href="mailto:madhavkunal27@gmail.com" class="gmail" target="_blank"><i
+                                class="fab fa-google"></i>Gmail</a>
+                        <a href="https://twitter.com/maddykutechno" class="twitter" target="_blank"><i
+                                class="fab fa-twitter"></i>Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End -->
+
+<!-- Blog Section Begin -->
+<main>
+    <section class="medium-blog">
+        <div class="medium__pic">
+            <img src="{{ url_for('static', filename='img/medium/medium.gif') }}" alt="Medium Blog">
+        </div>
+    </section>
+    <section class="blog-posts">
+        <!-- Container where dynamic blog posts are injected -->
+        <div id="blog-post-container">
+            <!-- Dynamic blog posts are inserted here by your script or backend -->
+        </div>
+    </section>
+</main>
+<!-- Blog Section End -->
+
+
+{% endblock content %}
+
+{% block scripts %}
+<script>
+    fetch('/get-medium-posts')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            const blogPostContainer = document.getElementById('blog-post-container');
+            if (data.length === 0) {
+                blogPostContainer.innerHTML = '<p>No blog posts available.</p>';
+            } else {
+                blogPostContainer.innerHTML = ''; // Clear existing content
+                data.forEach(post => {
+                    const imageUrl = post.imageUrl || 'path_to_default_image.jpg'; // Provide a default image if none is specified
+                    const article = document.createElement('article');
+                    article.className = 'blog-post';
+
+                    // Use an anchor tag to wrap the content that needs to be clickable and open in a new tab
+                    article.innerHTML = `
+                    <a href="${post.url}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                        <img src="${imageUrl}" alt="${post.title}">
+                        <h2>${post.title}</h2>
+                        <p class="date">${post.date}</p>
+                        ${post.content ? `<p>${post.content}</p>` : ''}
+                    </a>
+                `;
+
+                    blogPostContainer.appendChild(article);
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching blog posts:', error);
+            const blogPostContainer = document.getElementById('blog-post-container');
+            blogPostContainer.innerHTML = '<p>Failed to load blog posts.</p>';
+        });
+</script>
+
+{% endblock scripts %}

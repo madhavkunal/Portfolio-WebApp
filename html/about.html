@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+<!-- Header Section Begin -->
+<header class="header">
+    <div class="container">
+        <div class="row header__row">
+            <div class="col-lg-6 header__left">
+                <div class="header__nav">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li class="active"><a href="/about">About</a></li>
+                            <li><a href="/portfolio">Portfolio</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-lg-6 header__right">
+                <div class="header__social">
+                    <div class="social-media-icons">
+                        <a href="https://www.linkedin.com/in/madhav-kunal/" class="linkedin" target="_blank"><i
+                                class="fab fa-linkedin"></i>LinkedIn</a>
+                        <a href="https://github.com/madhavkunal" class="github" target="_blank"><i
+                                class="fab fa-github"></i>GitHub</a>
+                        <a href="https://medium.com/@Madhav_Kunal" class="medium=" target="_blank"><i
+                                class="fab fa-medium"></i>Medium</a>
+                        <a href="mailto:madhavkunal27@gmail.com" class="gmail" target="_blank"><i
+                                class="fab fa-google"></i>Gmail</a>
+                        <a href="https://twitter.com/maddykutechno" class="twitter" target="_blank"><i
+                                class="fab fa-twitter"></i>Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End -->
+
+<!-- About Section Begin -->
+<section class="about spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="about__content">
+                    <div class="about__content-wrapper" style="display: flex;">
+                        <div class="about__mypic" style="order:1;">
+                            <img src="static/img/about/madhav.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="about__text-container" style="order: 2;">
+                        <div class="about__text">
+                            <!-- ... (text content) ... -->
+                            <p>Hi, I'm Madhav, a passionate Python developer with a strong interest in the fields of
+                                AI
+                                and
+                                cybersecurity. I love
+                                exploring the vast possibilities that Python offers and leveraging its power to
+                                build
+                                robust and
+                                efficient applications. </p>
+
+                            <h3>Education</h3>
+
+                            <p> My Python programming journey started with a comprehensive Udemy online course, <i>The
+                                    Complete Python Developer</i>, by
+                                Andrei Neagoie and the highly acclaimed book; <i>Python Crash Course (Third Edition)</i>
+                                by
+                                Eric
+                                Matthes. The Complete Python
+                                Developer course provided me with proficiency in a wide range of Python topics, from
+                                the
+                                basics and programming
+                                fundamentals to advanced topics such as Object-Oriented Programming, Functional
+                                Programming, and Data Structures. I also
+                                delved into practical applications like web development, machine learning, data
+                                science,
+                                and automation with popular
+                                tools such as Selenium, Kaggle and Jupyter Notebook. The course emphasized hands-on
+                                learning, enabling me to build
+                                several projects, including this portfolio website you are currently on as well as a
+                                web
+                                scraper for Hacker News. The
+                                Python Crash Course laid a strong foundation in programming concepts such as data
+                                structures, functions, modules and
+                                introduced advanced tools like pytest for testing and the pathlib module for file
+                                handling. This book was instrumental
+                                in teaching me how to write clean, efficient code and troubleshoot common
+                                programming
+                                issues effectively.
+
+                            <p>My
+                                cybersecurity knowledge was really gained through completing my hands-on <i>Google
+                                    Cybersecurity
+                                    Professional Certificate </i>; an online
+                                program on Coursera. This training prepared me for tackling sophisticated security
+                                challenges, ensuring robust network
+                                and data protection. As part of this certificate, I completed several courses,
+                                learned
+                                fundamentals, and applied several
+                                concepts in cybersecurity, such as managing security risks, protecting data, network
+                                security, Python automation, and
+                                used tools such as Linux and SQL.
+                            </p>
+                            </p>
+
+                        </div>
+                        <div class="about__images">
+                            <div class="about__image-row">
+                                <div class="about__image">
+                                    <a href="https://www.amazon.com/Python-Crash-Course-Eric-Matthes/dp/1718502702"
+                                        target="blank">
+                                        <img src="{{ url_for('static', filename='img/about/pythonbook.jpg') }}" alt="">
+                                    </a>
+                                </div>
+                                <div class="about__image">
+                                    <a href="https://www.udemy.com/course/complete-python-developer-zero-to-mastery/?couponCode=ST20MT50724"
+                                        target="blank">
+                                        <img src="{{ url_for('static', filename='img/about/udemycourse.jpg') }}" alt="">
+                                    </a>
+                                </div>
+                                <div class="about__image">
+                                    <a href="https://www.coursera.org/account/accomplishments/professional-cert/3RFWYL32FHA2"
+                                        target="blank">
+                                        <img src="{{ url_for('static', filename='img/about/googlecyber.png') }}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about__text-container" style="order: 2;">
+                        <div class=" about__text">
+                            <h3>Work Experience</h3>
+                            <p>
+                                Currently, I work as an AI Performance Tester at
+                                </i>(a
+                                subsidiary
+                                of
+                                <i>Surge AI</i>) and <i>Remotasks</i> (a
+                                subsidiary of <i>Scale AI</i>), where I
+                                work with cutting-edge Generative AI LLMs like Google Gemini, Anthropic Claude 3
+                                Opus,
+                                OpenAI GPT-4, and Meta AI,
+                                applying Reinforcement Learning from Human Feedback (RLHF) and Human in the Loop
+                                (HITL)
+                                techniques to optimize model
+                                training and evaluation.
+
+                                I assess and rate the outputs (text, audio) of Large Language Models (LLMs) in
+                                response
+                                to various prompts (text, audio,
+                                video), comparing responses from the same or different chatbots to determine which
+                                is
+                                more accurate or appropriate for a
+                                given context.
+
+                                I train LLMs using Natural Language Processing (NLP) techniques for claim
+                                verification,
+                                model evaluation, model
+                                comparison, prompt testing, and data labeling/annotation, focusing on enhancing the
+                                performance and accuracy of large
+                                language models through RLHF methods and HITL Labeling.
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="about__images2">
+                        <div class="about__image2-row">
+                            <div class="about__image2">
+                                <a href="https://www.dataannotation.tech/?projects=PROG_SA" target="_blank">
+                                    <img src="{{ url_for('static', filename='img/about/DAT.png') }}" alt="">
+                                </a>
+                            </div>
+                            <div class="about__image2">
+                                <a href="https://www.surgehq.ai/" target="blank">
+                                    <img src="{{ url_for('static', filename='img/about/surge ai.jpg') }}" alt="">
+                                </a>
+                            </div>
+                            <div class="about__image2">
+                                <a href="https://www.remotasks.com/en" target="blank">
+                                    <img src="{{ url_for('static', filename='img/about/remotasks.png') }}" alt="">
+                                </a>
+                            </div>
+                            <div class="about__image2">
+                                <a href="https://scale.com/generative-ai-data-engine" target="blank">
+                                    <img src="{{ url_for('static', filename='img/about/scale ai.jpg') }}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about__text-container" style="order: 2;">
+                        <div class="about__text">
+
+                            <p>
+                                When I'm not coding or working on AI projects, you can find me exploring different
+                                LLMs,
+                                contributing to open-source
+                                projects, and engaging with the vibrant Python community. Enjoy continually learning
+                                and
+                                staying up to date with the
+                                latest trends in the field. In my free time, I enjoy various sports and activities,
+                                such
+                                as kayaking, playing soccer,
+                                snowboarding, ping pong, working out, gaming and reading. I also have a keen
+                                interest in
+                                cryptocurrency, investing, and
+                                financial markets and was actually a Finance Major in my undergrad, but became
+                                heavily
+                                excited and passionate about the
+                                latest technologies and decided to head in that direction.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section End -->
+{% endblock %}
