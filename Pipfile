@@ -75,7 +75,7 @@ urllib3 = "==2.2.1"
 websocket-client = "==0.40.0"
 yarl = "==1.9.4"
 logging = "*"
-dotenv = "*"
+dotenv = "==0.0.5"
 "urllib.parse" = "*"
 medium = "*"
 
