@@ -24,11 +24,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run application
+    - name: Run application for 10 seconds
       env:
         FLASK_SECRET_KEY: ${{ secrets.FLASK_SECRET_KEY }}
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         MEDIUM_INTEGRATION_TOKEN: ${{ secrets.MEDIUM_INTEGRATION_TOKEN }}
         REDIRECT_URI: ${{ secrets.REDIRECT_URI }}
       run: |
-        python server.py
+        python server.py &
+        sleep 10
+        pkill -f 'python server.py'
