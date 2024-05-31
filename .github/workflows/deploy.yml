@@ -24,7 +24,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run application for 10 seconds
+    - name: Run application for 100 seconds
       env:
         FLASK_SECRET_KEY: ${{ secrets.FLASK_SECRET_KEY }}
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -32,5 +32,5 @@ jobs:
         REDIRECT_URI: ${{ secrets.REDIRECT_URI }}
       run: |
         python server.py &
-        sleep 10
+        sleep 100
         pkill -f 'python server.py'
