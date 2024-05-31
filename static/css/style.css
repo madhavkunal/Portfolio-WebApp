@@ -192,8 +192,7 @@ ol {
 
 .about__images {
     display: flex;
-    margin-top: 20px;
-    margin-bottom: -45px;
+    margin-top: 65px;
     overflow-x: visible;
     white-space: normal; 
 }
@@ -208,46 +207,44 @@ ol {
 
 .about__image-row {
     display: flex;
-    gap: 30px;
+    gap: 42.5px !important;
 }
 
 .about__image2-row {
     display: flex;
-	gap: 20px;
-	margin-left: 0;
+	gap: 30px !important;
 }
 
 
 .about__image img {
 	max-width: max-content;
-    width: 250% !important; /* Adjust the width as desired */
-	height: 150px !important;
-	aspect-ratio: 0.8/1;
+    width: 200px !important; /* Adjust the width as desired */
+	height: 200px !important;
 	border-radius: 1.1px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 2.5s ease;
-	margin-bottom: 40px;
-	margin-top: -10px;
+    transition: transform 1.7s ease;
+	margin-bottom: 17.5px;
+	margin-top: -20px;
 }
 
 
 .about__image2 img {
 	max-width: max-content;
-    width: 100px; /* Adjust the width as desired */
-    height: 90px; /* Adjust the height as desired */
+    width: 130px; /* Adjust the width as desired */
+    height: 120px; /* Adjust the height as desired */
 	border-radius: 1.1px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 2.5s ease;
-	margin-bottom: 7.5px;
-	margin-top: 7.5px;
+    transition: transform 1.7s ease;
+	margin-bottom: 15px;
+	margin-top: 15px;
 }
 
 .about__image img:hover {
-    transform: scale(1.3);
+    transform: scale(1.4);
 }
 
 .about__image2 img:hover {
-    transform: scale(1.35);
+    transform: scale(1.4);
 }
 
 
