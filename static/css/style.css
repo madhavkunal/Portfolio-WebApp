@@ -925,6 +925,7 @@ a:hover {
 .social-media-icons {
   display: flex;
   justify-content: center; /* Align icons to the right */
+  margin-left: -25px;
 }
 
 .social-media-icons a {
