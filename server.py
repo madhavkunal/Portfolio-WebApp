@@ -111,7 +111,7 @@ def get_medium_posts():
         soup = BeautifulSoup(post.summary, features="html.parser")
         image_tag = soup.find('img')
         image_url = image_tag['src'] if image_tag else 'path_to_default_image.jpg'
-        content_snippet = soup.text[:555] + '...' if len(soup.text) > 555 else soup.text
+        content_snippet = soup.text[:460] + ' ... ' if len(soup.text) > 460 else soup.text
         post_data.append({
             'title': post.title,
             'date': post.published,
