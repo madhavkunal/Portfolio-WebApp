@@ -152,6 +152,8 @@
                         resizeResponseArea();
                     }
                     chatLoader.style.display = 'none';
+                    // Clear the input box
+                    userInput.value = '';
                 })
                 .catch(error => {
                     console.error('Fetch error:', error);

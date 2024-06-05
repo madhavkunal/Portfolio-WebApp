@@ -207,7 +207,7 @@ ol {
 
 .about__image-row {
     display: flex;
-    gap: 42.5px !important;
+    gap: 25px !important;
 }
 
 .about__image2-row {
@@ -223,28 +223,28 @@ ol {
 	border-radius: 1.1px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 1.7s ease;
-	margin-bottom: 17.5px;
-	margin-top: -20px;
+	margin-bottom: 2.5px;
+	margin-top: -40px;
 }
 
 
 .about__image2 img {
 	max-width: max-content;
-    width: 130px; /* Adjust the width as desired */
-    height: 120px; /* Adjust the height as desired */
+    width: 290px; /* Adjust the width as desired */
+    height: 150px; /* Adjust the height as desired */
 	border-radius: 1.1px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 1.7s ease;
-	margin-bottom: 15px;
-	margin-top: 15px;
+	margin-bottom: 5px;
+	margin-top: 7.5px;
 }
 
 .about__image img:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 
 .about__image2 img:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 
 
@@ -976,21 +976,21 @@ a:hover {
 
 /* Portfolio Grid Styling */
 .portfolio-grid {
-    display: flex;
+    display: flex !important; 
     flex-wrap: wrap;  /* Allows items to wrap as needed */
-    justify-content: center;  /* Center items horizontally */
-    align-items: center;  /* Align items vertically */
+    justify-content: center !important;  /* Center items horizontally */
+    align-items: center !important;  /* Align items vertically */
     gap: 20px;  /* Spacing between items */
 }
 
 /* Individual Project Item Styling */
 .project-item {
-    display: flex;
+    display: flex !important;
     flex-direction: column;  /* Stack children vertically */
     justify-content: center;  /* Center content vertically inside each item */
     align-items: center;  /* Center content horizontally */
     width: 100%;  /* Adjust width to fit content initially */
-    max-width: 395px;  /* Maximum width for each project item */
+    max-width: 550px;  /* Maximum width for each project item */
     background: rgb(82,82,82);
     background: radial-gradient(circle, rgba(82,82,82,1) 0%, rgba(45,45,45,1) 100%);
     padding: 3px;
@@ -1023,6 +1023,7 @@ a:hover {
     margin: 0;  /* Remove margins that could introduce space */
     padding: 0;  /* Remove padding that could introduce space */
 }
+
 
 /* Specific button and form element adjustments */
 .project-item button, .project-item input, .project-item textarea,
@@ -1330,19 +1331,19 @@ border-width: 2px !important;
 
 textarea#userInput {
     line-height: 20px; /* Adjust this based on your styling */
-    height: 25px;
-    width: 100%; /* Adjust width to avoid hanging out of modal */
-    padding: 2.75px; /* Padding for some space inside the borders */
+    height: 20px;
+    width: 460px; /* Adjust width to avoid hanging out of modal */
+    padding: 7px; /* Padding for some space inside the borders */
     font-family: calibri;
     font-size: 13.5px; /* Adequate font size for readability */
     color: white;
     background: rgb(88,0,47);
     background: radial-gradient(circle, rgba(88,0,47,1) 0%, rgba(60,0,34,1) 100%); 
-    margin-top: 10px;
-    margin-bottom: -12.5px;
+    margin-top: 11px;
+    margin-left: 10px;
+    margin-bottom: -14.5px;
     resize: none; /* Disable manual resizing */
     overflow-y: hidden; /* Hide vertical scrollbar */
-    padding: 8px; /* Adjust padding as necessary */
 }
 
 /* Auto-grow the textarea when user types */
@@ -1362,10 +1363,6 @@ textarea#userInput:focus {
 }
 
 
-#sendButton{
-    margin: 10px auto; /* Center align these elements */
-}
-
 /* Chat Interface */
 .send-button {
     display: inline-flex;
@@ -1379,34 +1376,32 @@ textarea#userInput:focus {
 }
 
 .chatgpt-icon {
-    width: 12px; /* Adjust the size as needed */
-    height: 12px; /* Adjust the size as needed */
-    margin-bottom: 1px !important;
-    margin-left: 3.5px; /* Space between text and icon */
+    width: 16.5px; /* Adjust the size as needed */
+    height: 16.5px; /* Adjust the size as needed */
+    margin-bottom: 3px !important;
+    margin-left: 3px; /* Space between text and icon */
 }
 
 .scrape-icon {
-    width: 16px !important; /* Adjust the size as needed */
-    height: 16px !important; /* Adjust the size as needed */
+    width: 16.5px !important; /* Adjust the size as needed */
+    height: 16.5px !important; /* Adjust the size as needed */
     margin-bottom: 2.5px;
     margin-left: 3.5px; /* Space between text and icon */
 }
 
 /* Style for the send button */
 #sendButton {
-    height: 25px;
-    max-width: 15% !important;
+    height: 32.25px;
+    max-width: 11.75% !important;
 background: radial-gradient(circle, rgba(0,178,255,1) 0%, rgba(0,213,255,1) 100%);
     color: black; /* White text */
-    font-size: 11px !important; /* Match font size with input */
+    font-size: 12px !important; /* Match font size with input */
     font-weight: bold !important;
-    border-radius: 4px; /* Rounded corners */
-    border-width: 2px;
+    border-radius: 1px; /* Rounded corners */
     border-color: #636363;
     cursor: pointer; /* Pointer cursor on hover */
     /* margin-left: 80px; Space between button and input box */
-    margin-top: 12.5px !important;
-    margin-bottom: 5px !important;
+    margin-right: -400px;
 }
 
 #sendButton:hover {
@@ -1420,13 +1415,15 @@ background: radial-gradient(circle, rgba(0,191,255,1) 0%, rgba(0,140,255,1) 100%
 
 /* Style for the response area */
 #responseArea {
-    width: 100%; /* Full-width to match the input */
-    width: 375px;
-    height: 20px;
+    width: 530px;
+    line-height: 20px; /* Adjust this based on your styling */
+    height: 25px;
     max-height: 450px; /* Set maximum height for the response area */
     font-family: Calibri;
     margin-bottom: 10px;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     font-size: 13px !important; /* Legible font size */
 color: rgb(0, 0, 0);
     overflow-y: auto; /* Allow vertical scrolling */
@@ -1439,8 +1436,8 @@ color: rgb(0, 0, 0);
     color: white;
     background: rgb(88,0,47);
     background: radial-gradient(circle, rgba(88,0,47,1) 0%, rgba(60,0,34,1) 100%); 
-    padding: 2.75px;
-    margin-top: 10px;
+    padding: 7px;
+    margin-top: 7.5px !important;
     overflow: auto; /* Enable scrolling if content overflows */
     max-height: 50vh; /* Maximum height as a percentage of the viewport height */
     transition: height 0.2s ease-out; /* Smooth transition for height changes */
