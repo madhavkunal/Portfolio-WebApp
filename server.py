@@ -8,7 +8,6 @@ from flask_cors import CORS
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 from urllib.parse import urlparse
-from medium import Client as MediumClient
 
 # Load environment variables
 load_dotenv()
@@ -23,16 +22,12 @@ app.secret_key = os.getenv('FLASK_SECRET_KEY')
 if not app.secret_key:
     logging.error("Flask secret key is not set.")
 openai.api_key = os.getenv('OPENAI_API_KEY')
-medium_integration_token = os.getenv('MEDIUM_INTEGRATION_TOKEN')
 
 # Define & Register the filter
 def urlhost(url):
     return urlparse(url).hostname
 
 app.jinja_env.filters['urlhost'] = urlhost
-
-# Initialize MediumClient with the loaded token
-medium_client = MediumClient(medium_integration_token)
 
 # Project 1. Hacker News Scraper Functions
 @app.route('/hackernews-scraper', methods=['POST'])
