@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}About{% endblock %}
 
 {% block content %}
+
+<!-- Header Section Begin -->
 <header class="header">
     <div class="container">
         <div class="row header__row">
@@ -23,12 +25,13 @@
                 <div class="header__social">
                     <div class="social-media-icons">
                         <a href="https://www.linkedin.com/in/madhav-kunal/" class="linkedin" target="_blank"><i
-                                class="fab fa-linkedin"></i>LinkedIn</a>
+                                class="fab fa-linkedin"></i>Linkedin</a>
                         <a href="https://github.com/madhavkunal" class="github" target="_blank"><i
-                                class="fab fa-github"></i>GitHub</a>
-                        <a href="https://medium.com/@Madhav_Kunal" class="medium" target="_blank"><i
-                                class="fab fa-medium"></i>Medium</a>
-                        <a href="mailto:madhavkunal27@gmail.com" class="gmail" target="_blank"><i
+                                class="fab fa-github"></i>Github</a>
+                        <a href="https://madhavkunal.substack.com/" class="substack" target="_blank"
+                            aria-label="Substack">
+                            <img src="{{ url_for('static', filename='img/substack.svg') }}" alt="Substack">Substack</a>
+                        <a href="mailto:madhavkunal0@gmail.com" class="gmail" target="_blank"><i
                                 class="fab fa-google"></i>Gmail</a>
                         <a href="https://twitter.com/maddykutechno" class="twitter" target="_blank"><i
                                 class="fab fa-twitter"></i>Twitter</a>
@@ -38,6 +41,7 @@
         </div>
     </div>
 </header>
+<!-- Header End -->
 
 <main class="home-main">
     <section class="project-slider">

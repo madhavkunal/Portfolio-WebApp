@@ -25,12 +25,13 @@
                 <div class="header__social">
                     <div class="social-media-icons">
                         <a href="https://www.linkedin.com/in/madhav-kunal/" class="linkedin" target="_blank"><i
-                                class="fab fa-linkedin"></i>LinkedIn</a>
+                                class="fab fa-linkedin"></i>Linkedin</a>
                         <a href="https://github.com/madhavkunal" class="github" target="_blank"><i
-                                class="fab fa-github"></i>GitHub</a>
-                        <a href="https://medium.com/@Madhav_Kunal" class="medium" target="_blank"><i
-                                class="fab fa-medium"></i>Medium</a>
-                        <a href="mailto:madhavkunal27@gmail.com" class="gmail" target="_blank"><i
+                                class="fab fa-github"></i>Github</a>
+                        <a href="https://madhavkunal.substack.com/" class="substack" target="_blank"
+                            aria-label="Substack">
+                            <img src="{{ url_for('static', filename='img/substack.svg') }}" alt="Substack">Substack</a>
+                        <a href="mailto:madhavkunal0@gmail.com" class="gmail" target="_blank"><i
                                 class="fab fa-google"></i>Gmail</a>
                         <a href="https://twitter.com/maddykutechno" class="twitter" target="_blank"><i
                                 class="fab fa-twitter"></i>Twitter</a>
@@ -44,9 +45,11 @@
 
 <!-- Blog Section Begin -->
 <main>
-    <section class="medium-blog">
-        <div class="medium__pic">
-            <img src="{{ url_for('static', filename='img/medium/medium.gif') }}" alt="Medium Blog">
+    <section class="substack-blog">
+        <div class="substack__pic">
+            <a href="https://madhavkunal.substack.com/" target="_blank" rel="noopener noreferrer">
+                <img src="{{ url_for('static', filename='img/substack/substack.webp') }}" alt="Substack Blog">
+            </a>
         </div>
     </section>
     <section class="blog-posts">
@@ -58,49 +61,44 @@
     <br>
 </main>
 <!-- Blog Section End -->
-
-
 {% endblock content %}
+
 
 {% block scripts %}
 <script>
-    fetch('/get-medium-posts')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
+    fetch('/get-substack-posts')
+        .then(response => response.json())
         .then(data => {
             const blogPostContainer = document.getElementById('blog-post-container');
-            if (data.length === 0) {
-                blogPostContainer.innerHTML = '<p>No blog posts available.</p>';
-            } else {
-                blogPostContainer.innerHTML = ''; // Clear existing content
-                data.forEach(post => {
-                    const imageUrl = post.imageUrl || 'path_to_default_image.jpg'; // Provide a default image if none is specified
-                    const article = document.createElement('article');
-                    article.className = 'blog-post';
+            blogPostContainer.innerHTML = '';  // Clear existing content
+            data.forEach(post => {
+                // Create the link wrapper
+                const link = document.createElement('a');
+                link.href = post.url;
+                link.target = '_blank';  // Open in new tab
+                link.rel = 'noopener noreferrer';
+                link.style.textDecoration = 'none';  // Remove underline from links
+                link.style.color = 'inherit';  // Inherit text color
 
-                    // Use an anchor tag to wrap the content that needs to be clickable and open in a new tab
-                    article.innerHTML = `
-                    <a href="${post.url}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                        <img src="${imageUrl}" alt="${post.title}">
-                        <h2>${post.title}</h2>
-                        <p class="date">${post.date}</p>
-                        ${post.content ? `<p>${post.content}</p>` : ''}
-                    </a>
+                // Create the blog post content
+                const postElement = document.createElement('div');
+                postElement.className = 'blog-post';
+                postElement.innerHTML = `
+                    <img src="${post.imageUrl}" alt="Post Image" style="width:100%; height:auto;">
+                    <h3>${post.title}</h3>
+                    <p class="date">${post.date}</p>
+                    <p>${post.content}</p>
                 `;
 
-                    blogPostContainer.appendChild(article);
-                });
-            }
+                // Append the blog post to the link, then to the container
+                link.appendChild(postElement);
+                blogPostContainer.appendChild(link);
+            });
         })
         .catch(error => {
-            console.error('Error fetching blog posts:', error);
+            console.error('Error loading posts:', error);
             const blogPostContainer = document.getElementById('blog-post-container');
             blogPostContainer.innerHTML = '<p>Failed to load blog posts.</p>';
         });
 </script>
-
 {% endblock scripts %}

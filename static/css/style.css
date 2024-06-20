@@ -15,15 +15,18 @@
    Template default CSS
 ----------------------------------------*/
 
-.container{
-  margin-top: 3px; /* Adjust this value to control how far down you want to move the carousel */
-  margin-bottom: 3px;
+.container {
+    margin-top: 3px;
+    /* Adjust this value to control how far down you want to move the carousel */
+    margin-bottom: 3px;
 }
 
 .container {
     display: flex;
-    align-items: center;  /* Ensures vertical alignment doesn't change */
-    justify-content: start;  /* Aligns children at the start of the container */
+    align-items: center;
+    /* Ensures vertical alignment doesn't change */
+    justify-content: start;
+    /* Aligns children at the start of the container */
 }
 
 
@@ -31,22 +34,23 @@ html,
 body {
     height: 100%;
     line-height: 1.8;
-	margin: 0;
+    margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif; /* A more modern font */
+    font-family: 'Open Sans', sans-serif;
+    /* A more modern font */
     -webkit-font-smoothing: antialiased;
-background: radial-gradient(circle, rgba(0,226,255,1) 0%, rgba(0,178,255,1) 100%);
+    background: radial-gradient(circle, rgba(0, 226, 255, 1) 0%, rgba(0, 178, 255, 1) 100%);
 }
 
 .main-container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-	overflow: auto
+    overflow: auto
 }
 
 .content-container {
-	flex-grow: 1;
+    flex-grow: 1;
     background-color: transparent;
 }
 
@@ -57,67 +61,67 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
-	color: #000000;
-	font-weight: 400;
-	font-family: "Mulish", sans-serif;
+    margin: 0;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Mulish", sans-serif;
 }
 
 h1 {
-	font-size: 70px;
+    font-size: 70px;
 }
 
 h2 {
-	font-size: 36px;
+    font-size: 36px;
 }
 
 h3 {
-	font-size: 30px;
+    font-size: 30px;
 }
 
 h4 {
-	font-size: 24px;
+    font-size: 24px;
 }
 
 h5 {
-	font-size: 18px;
+    font-size: 18px;
 }
 
 h6 {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 p {
-	font-size: 18px;
-	font-family: "Mulish", sans-serif;
-	color: #ffffff;
-	font-weight: 400;
-	line-height: 25px;
-	margin: 0 0 15px 0;
+    font-size: 18px;
+    font-family: "Mulish", sans-serif;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 0 0 15px 0;
 }
 
 img {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 input:focus,
 select:focus,
 button:focus,
 textarea:focus {
-	outline: none;
+    outline: none;
 }
 
 
 a:focus {
-	text-decoration: underline;
-	outline: none;
-	color: #ffffff;
+    text-decoration: underline;
+    outline: none;
+    color: #ffffff;
 }
 
 ul,
 ol {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -132,8 +136,9 @@ ol {
 }
 
 .about__mypic {
-	margin-left: 0;
-    margin-right: 20px; /* Adjust spacing between image and text */
+    margin-left: 0;
+    margin-right: 20px;
+    /* Adjust spacing between image and text */
     margin-bottom: 20px;
     margin-top: 10px;
 }
@@ -141,12 +146,13 @@ ol {
 .about__mypic img {
     width: 52.5%;
     height: auto;
-	border-radius: 500px;
+    border-radius: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about__title h2 {
-    color: #ffffff; /* White color for titles */
+    color: #ffffff;
+    /* White color for titles */
 }
 
 .about {
@@ -159,7 +165,7 @@ ol {
 }
 
 .about__text-container {
-	flex: 1;
+    flex: 1;
     max-width: 65%;
     margin-right: 20px;
     margin-left: 0;
@@ -184,7 +190,7 @@ ol {
 
 .about__text p {
     font-size: 13.5px;
-	font-family: Calibri;
+    font-family: Calibri;
     line-height: 1.6;
     margin-bottom: 30px;
     color: #000000;
@@ -194,7 +200,7 @@ ol {
     display: flex;
     margin-top: 65px;
     overflow-x: visible;
-    white-space: normal; 
+    white-space: normal;
 }
 
 .about__images2 {
@@ -202,7 +208,7 @@ ol {
     margin-top: -15px;
     margin-bottom: 15px;
     overflow-x: visible;
-    white-space: normal; 
+    white-space: normal;
 }
 
 .about__image-row {
@@ -212,31 +218,34 @@ ol {
 
 .about__image2-row {
     display: flex;
-	gap: 30px !important;
+    gap: 30px !important;
 }
 
 
 .about__image img {
-	max-width: max-content;
-    width: 200px !important; /* Adjust the width as desired */
-	height: 200px !important;
-	border-radius: 1.1px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: max-content;
+    width: 200px !important;
+    /* Adjust the width as desired */
+    height: 200px !important;
+    border-radius: 1.1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 1.7s ease;
-	margin-bottom: 2.5px;
-	margin-top: -40px;
+    margin-bottom: 2.5px;
+    margin-top: -40px;
 }
 
 
 .about__image2 img {
-	max-width: max-content;
-    width: 290px; /* Adjust the width as desired */
-    height: 150px; /* Adjust the height as desired */
-	border-radius: 1.1px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: max-content;
+    width: 290px;
+    /* Adjust the width as desired */
+    height: 150px;
+    /* Adjust the height as desired */
+    border-radius: 1.1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 1.7s ease;
-	margin-bottom: 5px;
-	margin-top: 7.5px;
+    margin-bottom: 5px;
+    margin-top: 7.5px;
 }
 
 .about__image img:hover {
@@ -283,52 +292,55 @@ ol {
         font-size: 14px;
     }
 
-    .about__image-row, .about__image2-row {
+    .about__image-row,
+    .about__image2-row {
         gap: 20px;
     }
 }
 
 /* Responsive Styles */
 @media (min-width: 1px) {
-  .header__row {
-    flex-direction: row;
-    align-items: flex-start;
-  }
+    .header__row {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 
-  .header__left,
-  .header__right {
-    max-width: 50%;
-    justify-content: center;
-  }
+    .header__left,
+    .header__right {
+        max-width: 50%;
+        justify-content: center;
+    }
 
-  .header__menu ul {
-    justify-content: left;
-  }
+    .header__menu ul {
+        justify-content: left;
+    }
 
-  .social-media-icons {
-    justify-content: right;
-  }
+    .social-media-icons {
+        justify-content: right;
+    }
 }
 
 
 a {
     color: #007BFF;
-    text-decoration: none; /* Cleaner look */
+    text-decoration: none;
+    /* Cleaner look */
 }
 
 a:hover {
-    text-decoration: underline; /* For better user interaction visibility */
+    text-decoration: underline;
+    /* For better user interaction visibility */
 }
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .col {
-  flex: 1;
-  padding: 0 20px;
-  max-width: 600px;
+    flex: 1;
+    padding: 0 20px;
+    max-width: 600px;
 }
 
 
@@ -336,34 +348,34 @@ a:hover {
 	Paragraph 
 -----------------------*/
 .paragraph-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
 }
 
 .paragraph-text {
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 200px;
-  margin-bottom: 20px;
-  text-align: left;
-  max-width: 500px;
-  line-height: 1.25;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 500px;
+    line-height: 1.25;
 }
 
 ::placeholder {
-  font-size: 18px;
-  font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 
 .modal-body {
-	font: rgb(255, 255, 255)
-    
+    font: rgb(255, 255, 255)
 }
 
 .modal-footer button {
-    margin-bottom: 0; /* Reduces space below buttons */
+    margin-bottom: 0;
+    /* Reduces space below buttons */
 }
 
 
@@ -371,68 +383,73 @@ a:hover {
 
 /* Suggested adjustments to increase width */
 .modal-dialog {
-    max-width: 200%; /* Increase max-width to 95% of the viewport or container width */
-    width: auto; /* Lets width grow with the content up to max-width */
-    overflow: visible; /* Keep visible to ensure no content is cut off */
-    margin: 20px auto; /* Maintain center alignment and spacing */
+    max-width: 200%;
+    /* Increase max-width to 95% of the viewport or container width */
+    width: auto;
+    /* Lets width grow with the content up to max-width */
+    overflow: visible;
+    /* Keep visible to ensure no content is cut off */
+    margin: 20px auto;
+    /* Maintain center alignment and spacing */
 }
 
 .section-title {
-	margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .section-title h4,
 .section-title h5 {
-	color: #ffffff;
-	font-weight: 600;
-	line-height: 21px;
-	text-transform: uppercase;
-	padding-left: 20px;
-	position: relative;
-	font-family: "Oswald", sans-serif;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 21px;
+    text-transform: uppercase;
+    padding-left: 20px;
+    position: relative;
+    font-family: "Oswald", sans-serif;
 }
 
 .section-title h4:after,
 .section-title h5:after {
-	position: absolute;
-	left: 0;
-	top: -6px;
-	height: 32px;
-	width: 4px;
-	background: #e53637;
-	content: "";
+    position: absolute;
+    left: 0;
+    top: -6px;
+    height: 32px;
+    width: 4px;
+    background: #e53637;
+    content: "";
 }
 
 .set-bg {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
 }
 
 .spacer {
-	height: 55px;
+    height: 55px;
 }
 
 .spacer2 {
-	height: 15px;
+    height: 15px;
 }
 
 .spacer3 {
-	height: 10px;
+    height: 10px;
 }
 
 .spad {
-	padding-top: 100px;
-	padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .col-lg-2 {
-    flex: 0 0 16.666667%; /* Flex-grow, Flex-shrink, Flex-basis */
+    flex: 0 0 16.666667%;
+    /* Flex-grow, Flex-shrink, Flex-basis */
     max-width: 16.666667%;
 }
 
-.col-lg-4.col-md-4.col-sm-4 { 
-  margin-right: 5px; 
+.col-lg-4.col-md-4.col-sm-4 {
+    margin-right: 5px;
 }
 
 
@@ -456,37 +473,37 @@ a:hover {
 .text-white span,
 .text-white li,
 .text-white a {
-	color: #fff;
+    color: #fff;
 }
 
 /* buttons */
 
 .primary-btn {
-	display: inline-block;
-	font-size: 13px;
-	font-weight: 700;
-	color: #ffffff;
-	letter-spacing: 2px;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
 }
 
 .primary-btn span {
-	font-size: 18px;
-	margin-left: 5px;
-	position: relative;
-	top: 3px;
+    font-size: 18px;
+    margin-left: 5px;
+    position: relative;
+    top: 3px;
 }
 
 .site-btn {
-	font-size: 13px;
-	color: #ffffff;
-	background: #e53637;
-	font-weight: 700;
-	border: none;
-	border-radius: 2px;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	display: inline-block;
-	padding: 12px 30px;
+    font-size: 13px;
+    color: #ffffff;
+    background: #e53637;
+    font-weight: 700;
+    border: none;
+    border-radius: 2px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 12px 30px;
 }
 
 
@@ -495,27 +512,33 @@ a:hover {
 -----------------------*/
 
 .home-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto; /* Adjusted to auto for dynamic height */
-  min-height: 30vh; /* Ensures a minimum height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    /* Adjusted to auto for dynamic height */
+    min-height: 30vh;
+    /* Ensures a minimum height */
 }
 
 .carousel-container {
-  height: 520px; /* Slightly larger to accommodate any controls or indicators */
+    height: 520px;
+    /* Slightly larger to accommodate any controls or indicators */
 }
 
 
 .carousel-item {
-  transition: transform 0s ease; /* Keeps the transition smooth */
+    transition: transform 0s ease;
+    /* Keeps the transition smooth */
 }
 
 
 .carousel-item img {
     margin-top: 100px;
-  width: 595px; /* Adjust this to fit the width of the carousel */
-  height: 295px; /* Fixed height for all images */
+    width: 595px;
+    /* Adjust this to fit the width of the carousel */
+    height: 295px;
+    /* Fixed height for all images */
 }
 
 
@@ -525,148 +548,187 @@ a:hover {
     font-weight: bold;
     background-color: #202020ad;
     padding: 3px;
-  color: rgb(255, 255, 255);   /* Color of the link */
-  cursor: pointer; /* Indicates it's clickable */
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+    color: rgb(255, 255, 255);
+    /* Color of the link */
+    cursor: pointer;
+    /* Indicates it's clickable */
+    transition: color 0.3s ease;
+    /* Smooth color transition on hover */
 }
 
 .carousel-caption a:hover,
 .carousel-caption a:focus {
-  color: rgb(0, 200, 255); /* Color change on hover/focus */
-  text-decoration: none; /* No underline on hover for a clean look */
+    color: rgb(0, 200, 255);
+    /* Color change on hover/focus */
+    text-decoration: none;
+    /* No underline on hover for a clean look */
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgb(128, 0, 255); 
+    background-color: rgb(128, 0, 255);
 }
 
 .carousel-indicators li {
-  background-color: rgb(128, 0, 255);  /* Visible indicators */
-    width: 10px; /* Makes indicators rounder and more visible */
-  height: 10px;
-  border-radius: 50%;
+    background-color: rgb(128, 0, 255);
+    /* Visible indicators */
+    width: 10px;
+    /* Makes indicators rounder and more visible */
+    height: 10px;
+    border-radius: 50%;
 }
 
 /* Adjustments for smoother transitions and avoiding empty space */
 
 .carousel-control-next,
 .carousel-control-prev {
-  width: 5%;  /*Adjust the width of the controls to prevent unused space */
-   top: 50%; /* Aligns the controls vertically */
-  transform: translateY(-50%); /* Ensures it's centered from the top */
+    width: 5%;
+    /*Adjust the width of the controls to prevent unused space */
+    top: 50%;
+    /* Aligns the controls vertically */
+    transform: translateY(-50%);
+    /* Ensures it's centered from the top */
 }
 
 @media (max-width: 768px) {
-  .carousel-item img {
-    height: 300px; /* Smaller fixed height for smaller screens */
-  }
-  .carousel-container {
-    height: 320px;
-  }
+    .carousel-item img {
+        height: 300px;
+        /* Smaller fixed height for smaller screens */
+    }
+
+    .carousel-container {
+        height: 320px;
+    }
 }
 
 /*---------------------
     Blog
 -----------------------*/
 
-/*Medium Blog GIF */
+/*Substack Blog Img*/
 
-.medium-blog {
+.substack-blog {
     display: flex;
     justify-content: center;
-    margin-bottom: 90px;
+    margin-bottom: 150px;
     margin-top: 100px;
 }
 
-.medium__pic img {
+.substack__pic img {
     display: flex;
     justify-content: center;
-    width: 470px;
-    height: 70% !important;
-    transition: transform 0.3s ease;
+    width: 500px;
+    height: 285px;
+    transition: transform 0.5s ease;
 }
 
 
 /* Blog Posts Container */
-.blog-posts { 
-    max-width:470px; /*Adjust the width to your preference*/
+.blog-posts {
+    max-width: 500px;
+    /*Adjust the width to your preference*/
     margin: 50px auto;
-    margin-top: -110px;
+    margin-top: -100px;
+    margin-bottom: 50px;
 }
 
 /* Individual Post Styling */
 .blog-post {
+    height: 490px;
     display: block;
     background: linear-gradient(27deg, rgb(205, 205, 205) 0%, rgb(253, 253, 253) 100%);
-    transition: transform 0.015s ease;
+    transition: transform 0.5s ease;
     cursor: pointer;
     text-decoration: none;
     color: inherit;
-    margin-top: 75px;
-    margin-bottom: 75px !important;
+    margin-top: 40px;
 }
 
 .blog-post img {
-    margin-top: -60px;
-    width: 470px;
-    height: 195px; /* Set a consistent height */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
+    width: 550px !important;
+    /* Set a fixed width */
+    height: 285px !important;
+    /* Set a fixed height */
+    object-fit: cover;
+    /* Ensure the image covers the area without distortion */
+    display: block;
+    /* Ensures the image takes up the full width of its container */
+    margin: 0 auto;
+    /* Centers the image horizontally */
 }
 
+
 .blog-post p {
-    font-size: 11.5px;
+    font-size: 11.75px;
     color: #000000;
-    margin: 10px 10px 5px 10px; /* Adjusted margins (Top, Right, Bottom, Left) */
+    margin: 10px 10px 5px 10px;
+    /* Adjusted margins (Top, Right, Bottom, Left) */
     margin-bottom: 15px;
     line-height: 20px;
 }
 
-.blog-post h2 {
+.blog-post h3 {
     font-size: 16px;
     font-weight: bold;
     color: #2575ff;
-    margin: 10px 0 2.5px 10px; /* Adjusted margins (Top, Right, Bottom, Left) */
+    margin: 10px 0 2.5px 10px;
+    /* Adjusted margins (Top, Right, Bottom, Left) */
+}
+
+.blog-post .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2575ff;
+    margin: 10px 0 2.5px 10px;
+    /* Adjusted margins (Top, Right, Bottom, Left) */
 }
 
 .blog-post .date {
     font-size: 11px;
     color: #646464;
-    margin: 0 0 2.5px 10px; /* Adjusted margins (Top, Right, Bottom, Left) */
+    margin: 0 0 2.5px 10px;
+    /* Adjusted margins (Top, Right, Bottom, Left) */
 }
+
 
 .blog-post:hover {
-    transform: scale(103%);
+    transform: scale(102%);
 }
 
-.blog-post:hover h2,
 .blog-post:hover .date {
-    color: #10b3ff;
+    color: #00a2ff
 }
 
+.blog-post:hover h3 {
+    color: #00a2ff
+}
+
+.substack__pic img:hover {
+    transform: scale(102%);
+}
 
 .page-up {
-	left: 50%;
-	top: -25px;
-	margin-left: -25px;
+    left: 50%;
+    top: -25px;
+    margin-left: -25px;
 }
 
 .page-up a {
-	display: inline-block;
-	font-size: 36px;
-	color: #ffffff;
-	height: 50px;
-	width: 50px;
-	background: #e53637;
-	line-height: 50px;
-	text-align: center;
-	border-radius: 50%;
+    display: inline-block;
+    font-size: 36px;
+    color: #ffffff;
+    height: 50px;
+    width: 50px;
+    background: #e53637;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
 }
 
 .page-up a span {
-	position: relative;
-	top: 2px;
-	left: -1px;
+    position: relative;
+    top: 2px;
+    left: -1px;
 }
 
 
@@ -677,22 +739,26 @@ a:hover {
 /* Main Menu */
 
 .header__menu a {
-    color: #000000 !important; /* Change to your desired color */
-    text-decoration: none; /* Typically remove underline from links */
+    color: #000000 !important;
+    /* Change to your desired color */
+    text-decoration: none;
+    /* Typically remove underline from links */
 }
 
 .header__menu a:hover {
-    color: #ffffff !important; /* Color when the mouse hovers over the link */
+    color: #ffffff !important;
+    /* Color when the mouse hovers over the link */
 }
 
 
 .header__menu ul li a {
     font-size: 12.25px !important;
-	font-weight: bold !important;
+    font-weight: bold !important;
     color: #000000;
     display: flex;
     font-weight: 700;
-    transition: all 0.5s; /* Simplified transition (prefixes are often unnecessary in modern browsers) */
+    transition: all 0.5s;
+    /* Simplified transition (prefixes are often unnecessary in modern browsers) */
     padding: 20px;
 }
 
@@ -703,47 +769,26 @@ a:hover {
 }
 
 .header__menu ul li:hover .dropdown {
-	top: 62px;
-	opacity: 1;
-	visibility: visible;
+    top: 62px;
+    opacity: 1;
+    visibility: visible;
 }
 
 .header__menu ul li:hover .dropdown li a {
-	background: transparent;
-}
-
-
-.header__menu ul li .dropdown li a {
-	font-size: 14px;
-	color: #111111;
-	font-weight: 500;
-}
-
-.header__menu ul li a span {
-	position: relative;
-	font-size: 12.25px;
-	top: 2px;
+    background: transparent;
 }
 
 .header__right {
-	text-align: right;
-}
-
-.header__right a {
-	display: inline-block;
-	font-size: 11.5px;
-	color: #ffffff;
-	margin-right: 7.5px;
+    text-align: right;
 }
 
 .header__right a:last-child {
-	margin-right: 0;
+    margin-right: 0;
 }
 
 .slicknav_menu {
-	display: none;
+    display: none;
 }
-
 
 .header {
     display: flex;
@@ -753,20 +798,20 @@ a:hover {
 }
 
 .header__row {
-  justify-content: space-between;
-  align-items: center;
-  width: 75%;
-  margin-top: -10px;
-  margin-bottom: -10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin-top: -10px;
+    margin-bottom: -10px;
 }
 
 .header__left,
 .header__right {
-  align-items: center;
+    align-items: center;
 }
 
 .header__nav {
-  margin-right: auto;
+    margin-right: auto;
 }
 
 .header__menu {
@@ -807,7 +852,8 @@ a:hover {
 
 
 .header__menu ul li:hover a {
-    color: #dc4900 !important; /* Hover state text color */
+    color: #e05d1b !important;
+    /* Hover state text color */
 }
 
 .header__menu ul li:hover .dropdown {
@@ -853,19 +899,49 @@ a:hover {
 }
 
 /* Social Media Styles */
+
+/* Social Media Styles */
 .header__social {
     text-align: right;
     display: flex;
     align-items: center;
-    font-size: 10.25px;
     font-weight: bold;
     color: hsl(0, 0%, 0%);
     margin-left: 100px;
 }
 
+/* General style for all icons and FontAwesome adjustments */
+.header__social img,
 .header__social i {
-    margin-right: 5px;
+    font-size: 12.25px;
+    /* Uniform size for FontAwesome icons */
+    height: 13px;
+    /* Sets a specific height for all icons */
+    width: auto;
+    /* Maintains aspect ratio */
+    vertical-align: middle;
+    /* Aligns icons with the baseline of text */
+    padding: 0 5px 0 5px;
 }
+
+/* Specific adjustments for Substack icon if needed */
+.header__social .substack img {
+    height: 9.75px;
+    /* Ensure Substack icon matches other icons */
+    padding: 0 5px 0 5px;
+    margin-bottom: 2.25px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+/* Ensures vertical alignment is centered */
+.header__social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Consistent spacing between links */
+}
+
 
 .social-media-icons {
     display: flex;
@@ -878,27 +954,35 @@ a:hover {
     white-space: nowrap;
     color: inherit;
     text-decoration: none;
-    margin-left: 5px;
+    margin-left: 0px;
+    margin-right: 5px;
+    /* Consistent spacing between icons */
+    padding: 0 1px;
+    /* Optional: Add padding if icons are too close to each other */
     transition: color 0.3s ease;
+    font-size: 12px;
+    /* Consistent font size for all text */
 }
 
 /* Hover effects for social media icons */
-.social-media-icons .linkedin:hover {
-    color: #007bff;
+.social-media-icons a:hover {
+    color: #00a2ff;
+    ;
+    /* Changes the text color on hover */
 }
 
-.social-media-icons .github:hover {
-    color: #007bff;
+.social-media-icons .substack:hover img {
+
+    color: #00a2ff;
+    /* Changes the text color on hover */
+
+    /* Assuming `.substack` is the class for the <a> tag that wraps the Substack icon */
+    filter: brightness(0) saturate(100%) invert(27%) sepia(95%) saturate(6400%) hue-rotate(211deg) brightness(91%) contrast(92%);
+    /* CSS filter to turn icon blue on hover */
 }
-.social-media-icons .medium:hover {
-    color: #007bff;
-}
-.social-media-icons .gmail:hover {
-    color: #007bff;
-}
-.social-media-icons .twitter:hover {
-    color: #007bff;
-}
+
+
+
 @media (max-width: 767px) {
     .header__social-wrapper {
         margin-top: 400px;
@@ -906,16 +990,20 @@ a:hover {
 
     .social-media-icons {
         justify-content: center;
-        margin-left: -25px;
+        margin-left: 0;
+        /* Adjusted for alignment on smaller screens */
     }
 }
+
 
 /*---------------------
   Main Content
 -----------------------*/
 .main-content {
-    padding-top: 80px; /* Adjust this value according to your header's height */
-    padding-bottom: 80px; /* Adjust this value according to your footer's height */
+    padding-top: 80px;
+    /* Adjust this value according to your header's height */
+    padding-bottom: 80px;
+    /* Adjust this value according to your footer's height */
 }
 
 /* Header Base Styles */
@@ -928,7 +1016,7 @@ a:hover {
     top: 0;
     z-index: 999;
     padding: 10px 20px;
-    background: radial-gradient(circle, rgba(0,226,255,1) 0%, rgba(0,178,255,1) 100%);
+    background: radial-gradient(circle, rgba(0, 226, 255, 1) 0%, rgba(0, 178, 255, 1) 100%);
 }
 
 /* Logo Styling */
@@ -976,73 +1064,106 @@ a:hover {
 
 /* Portfolio Grid Styling */
 .portfolio-grid {
-    display: flex !important; 
-    flex-wrap: wrap;  /* Allows items to wrap as needed */
-    justify-content: center !important;  /* Center items horizontally */
-    align-items: center !important;  /* Align items vertically */
-    gap: 20px;  /* Spacing between items */
+    display: flex !important;
+    flex-wrap: wrap;
+    /* Allows items to wrap as needed */
+    justify-content: center !important;
+    /* Center items horizontally */
+    align-items: center !important;
+    /* Align items vertically */
+    gap: 20px;
+    /* Spacing between items */
 }
 
 /* Individual Project Item Styling */
 .project-item {
     display: flex !important;
-    flex-direction: column;  /* Stack children vertically */
-    justify-content: center;  /* Center content vertically inside each item */
-    align-items: center;  /* Center content horizontally */
-    width: 100%;  /* Adjust width to fit content initially */
-    max-width: 550px;  /* Maximum width for each project item */
-    background: rgb(82,82,82);
-    background: radial-gradient(circle, rgba(82,82,82,1) 0%, rgba(45,45,45,1) 100%);
+    flex-direction: column;
+    /* Stack children vertically */
+    justify-content: center;
+    /* Center content vertically inside each item */
+    align-items: center;
+    /* Center content horizontally */
+    width: 100%;
+    /* Adjust width to fit content initially */
+    max-width: 550px;
+    /* Maximum width for each project item */
+    background: rgb(82, 82, 82);
+    background: radial-gradient(circle, rgba(82, 82, 82, 1) 0%, rgba(45, 45, 45, 1) 100%);
     padding: 3px;
 }
 
 
 @media (max-width: 1024px) {
+
     /* Removed flex-direction change; keep row layout */
     .portfolio-grid {
-        justify-content: space-around; /* Optional: Adjust alignment if needed */
+        justify-content: space-around;
+        /* Optional: Adjust alignment if needed */
     }
 }
 
 @media (max-width: 768px) {
+
     /* Removed flex-direction change; keep row layout */
     .portfolio-grid {
-        justify-content: space-around; /* Optional: Adjust alignment if needed */
+        justify-content: space-around;
+        /* Optional: Adjust alignment if needed */
     }
+
     .project-item {
-        width: 50%;  /* Adjust width for better fit on smaller screens */
+        width: 50%;
+        /* Adjust width for better fit on smaller screens */
     }
 }
 
 
 /* Resets for all child elements in a project item */
 .project-item * {
-    background: none;  /* Ensure no background color is applied */
-    border: none;  /* Remove borders that might cause spacing */
-    outline: none;  /* Remove focus outlines that might cause spacing */
-    margin: 0;  /* Remove margins that could introduce space */
-    padding: 0;  /* Remove padding that could introduce space */
+    background: none;
+    /* Ensure no background color is applied */
+    border: none;
+    /* Remove borders that might cause spacing */
+    outline: none;
+    /* Remove focus outlines that might cause spacing */
+    margin: 0;
+    /* Remove margins that could introduce space */
+    padding: 0;
+    /* Remove padding that could introduce space */
 }
 
 
 /* Specific button and form element adjustments */
-.project-item button, .project-item input, .project-item textarea,
-.project-item button:focus, .project-item button:hover,
-.project-item input:focus, .project-item input:hover,
-.project-item textarea:focus, .project-item textarea:hover {
-    background-color: transparent;  /* Unify background color */
-    box-shadow: none;  /* Ensure no shadows are cast */
+.project-item button,
+.project-item input,
+.project-item textarea,
+.project-item button:focus,
+.project-item button:hover,
+.project-item input:focus,
+.project-item input:hover,
+.project-item textarea:focus,
+.project-item textarea:hover {
+    background-color: transparent;
+    /* Unify background color */
+    box-shadow: none;
+    /* Ensure no shadows are cast */
 }
 
 /* Text and button alignments */
-.project-item button, .project-item a {
-    width: 100%;  /* Full width for clickable elements */
-    text-align: center;  /* Center text inside */
+.project-item button,
+.project-item a {
+    width: 100%;
+    /* Full width for clickable elements */
+    text-align: center;
+    /* Center text inside */
 }
 
-.project-item p, .project-item h4 {
-    width: 100%;  /* Ensure paragraphs also take full width */
-    text-align: center;  /* Center text for all text elements */
+.project-item p,
+.project-item h4 {
+    width: 100%;
+    /* Ensure paragraphs also take full width */
+    text-align: center;
+    /* Center text for all text elements */
     color: #e7e7e7;
     font-size: 12.5px;
     margin: 5px;
@@ -1059,29 +1180,39 @@ a:hover {
 }
 
 .project-item h4 {
-    color: #ffffff; /* White for headlines */
+    color: #ffffff;
+    /* White for headlines */
     font-size: 16.5px;
     font-weight: bold;
-    margin: 5px 5px -15px 5px; /* Optimized margin properties */
+    margin: 5px 5px -15px 5px;
+    /* Optimized margin properties */
     padding: 10px;
 }
 
 
-.project-buttons button, .project-buttons a {
-    margin-right: 5px; /* Right margin for spacing buttons */
-    margin-left: 5px; /* Left margin for spacing buttons */
-    margin-bottom: 5px; /* Bottom margin for spacing below buttons */
+.project-buttons button,
+.project-buttons a {
+    margin-right: 5px;
+    /* Right margin for spacing buttons */
+    margin-left: 5px;
+    /* Left margin for spacing buttons */
+    margin-bottom: 5px;
+    /* Bottom margin for spacing below buttons */
 }
 
-.project-buttons .btn:hover, .project-buttons .btn:active {
-    background-color: rgb(10, 210, 255) !important; /* Change the background color on hover */
+.project-buttons .btn:hover,
+.project-buttons .btn:active {
+    background-color: rgb(10, 210, 255) !important;
+    /* Change the background color on hover */
 }
 
 /* Modal adjustments for mobile screens */
 @media (max-width: 768px) {
     .modal-dialog {
-        width: 95%; /* Modal width is reduced to fit small screens */
-        max-width: 1000px; /* Overrides any max-width setting */
+        width: 95%;
+        /* Modal width is reduced to fit small screens */
+        max-width: 1000px;
+        /* Overrides any max-width setting */
     }
 }
 
@@ -1089,18 +1220,23 @@ a:hover {
 /* Loader Styling */
 /* General loader styling */
 .loader {
-    display: none; /* Default state is hidden */
+    display: none;
+    /* Default state is hidden */
     justify-content: center;
     align-items: center;
-    visibility: hidden; /* Initially hidden */
-    transform: none; /* No need to center it, just position directly */
+    visibility: hidden;
+    /* Initially hidden */
+    transform: none;
+    /* No need to center it, just position directly */
     z-index: 1000;
     margin-top: 10px;
 }
 
 .loader.show {
-    display: flex; /* Change display to flex when shown */
-    visibility: visible; /* Shown dynamically via JS */
+    display: flex;
+    /* Change display to flex when shown */
+    visibility: visible;
+    /* Shown dynamically via JS */
 }
 
 .loader img {
@@ -1113,8 +1249,8 @@ a:hover {
 /* GitHub Button Specific */
 
 .github-button {
-background: rgb(92,176,0);
-background: linear-gradient(58deg, rgba(92,176,0,1) 0%, rgba(0,193,62,1) 100%);
+    background: rgb(92, 176, 0);
+    background: linear-gradient(58deg, rgba(92, 176, 0, 1) 0%, rgba(0, 193, 62, 1) 100%);
     color: rgb(0, 0, 0);
     font-size: 11px !important;
     font-weight: bold !important;
@@ -1127,27 +1263,30 @@ background: linear-gradient(58deg, rgba(92,176,0,1) 0%, rgba(0,193,62,1) 100%);
     padding-top: 4px !important;
     padding-bottom: 22px !important;
     height: 25px !important;
-width: 23% !important; 
-    border-radius: 4px; /* Rounded corners */
+    width: 23% !important;
+    border-radius: 4px;
+    /* Rounded corners */
     border-width: 2px;
-    border-color: #636363;    border: none;
+    border-color: #636363;
+    border: none;
     cursor: pointer;
-    display: inline-block;  /* Align properly with other inline or inline-block elements */
+    display: inline-block;
+    /* Align properly with other inline or inline-block elements */
     text-align: center;
 }
 
 
 .github-button:hover {
-background: rgb(38,121,0);
-background: linear-gradient(58deg, rgba(38,121,0,1) 0%, rgba(0,170,21,1) 100%);
+    background: rgb(38, 121, 0);
+    background: linear-gradient(58deg, rgba(38, 121, 0, 1) 0%, rgba(0, 170, 21, 1) 100%);
     color: white;
 }
 
 
 /* Add this CSS rule to your existing styles */
 .hn-github-button {
-background: rgb(92,176,0);
-background: linear-gradient(58deg, rgba(92,176,0,1) 0%, rgba(0,193,62,1) 100%);
+    background: rgb(92, 176, 0);
+    background: linear-gradient(58deg, rgba(92, 176, 0, 1) 0%, rgba(0, 193, 62, 1) 100%);
     color: rgb(0, 0, 0);
     font-size: 11px !important;
     font-weight: bold !important;
@@ -1160,17 +1299,20 @@ background: linear-gradient(58deg, rgba(92,176,0,1) 0%, rgba(0,193,62,1) 100%);
     padding-top: 4px !important;
     padding-bottom: 22px !important;
     height: 25px !important;
-    border-radius: 4px; /* Rounded corners */
+    border-radius: 4px;
+    /* Rounded corners */
     border-width: 2px;
-    border-color: #636363;    border: none;
+    border-color: #636363;
+    border: none;
     cursor: pointer;
-    display: inline-block;  /* Align properly with other inline or inline-block elements */
+    display: inline-block;
+    /* Align properly with other inline or inline-block elements */
     text-align: center;
 }
 
 .hn-github-button:hover {
-background: rgb(38,121,0);
-background: linear-gradient(58deg, rgba(38,121,0,1) 0%, rgba(0,170,21,1) 100%);
+    background: rgb(38, 121, 0);
+    background: linear-gradient(58deg, rgba(38, 121, 0, 1) 0%, rgba(0, 170, 21, 1) 100%);
     color: white;
 }
 
@@ -1183,12 +1325,14 @@ background: linear-gradient(58deg, rgba(38,121,0,1) 0%, rgba(0,170,21,1) 100%);
     width: 75px !important;
     height: 28px !important;
     position: relative;
-    background-color: #007bff; /* Button background color */
-    cursor: pointer; /* Pointer cursor on hover */
+    background-color: #007bff;
+    /* Button background color */
+    cursor: pointer;
+    /* Pointer cursor on hover */
     font-size: 11px !important;
     font-weight: bold;
     color: rgb(0, 0, 0) !important;
-    background: radial-gradient(circle, rgba(255,139,0,1) 0%, rgba(255,109,0,1) 100%);
+    background: radial-gradient(circle, rgba(255, 139, 0, 1) 0%, rgba(255, 109, 0, 1) 100%);
     border-color: #636363;
     border-width: 2px;
     margin-top: 5px !important;
@@ -1196,17 +1340,17 @@ background: linear-gradient(58deg, rgba(38,121,0,1) 0%, rgba(0,170,21,1) 100%);
 }
 
 .btn-success:hover {
-color: white !important;
-background: rgb(255,108,31);
-background: radial-gradient(circle, rgba(255,108,31,1) 0%, rgba(255,51,51,1) 100%);
-border-color: #636363 !important;
-border-width: 2px !important;
+    color: white !important;
+    background: rgb(255, 108, 31);
+    background: radial-gradient(circle, rgba(255, 108, 31, 1) 0%, rgba(255, 51, 51, 1) 100%);
+    border-color: #636363 !important;
+    border-width: 2px !important;
 }
 
 .project-buttons .btn,
 .project-links .btn {
     height: 32px;
-    background: radial-gradient(circle, rgba(255,139,0,1) 0%, rgba(255,109,0,1) 100%);
+    background: radial-gradient(circle, rgba(255, 139, 0, 1) 0%, rgba(255, 109, 0, 1) 100%);
     color: #ffffff;
     margin-left: 13.5px;
     margin-right: 10px;
@@ -1221,7 +1365,7 @@ border-width: 2px !important;
 
 .project-buttons .btn:hover,
 .project-links .btn:hover {
-    background: linear-gradient(135deg, rgba(255,53,0,1) 0%, rgba(255,74,0,1) 100%);
+    background: linear-gradient(135deg, rgba(255, 53, 0, 1) 0%, rgba(255, 74, 0, 1) 100%);
 }
 
 .project-buttons,
@@ -1234,7 +1378,8 @@ border-width: 2px !important;
 /* Modal and Header Styles */
 .modal-header,
 .modal-content {
-    background-color: #f6f6ef; /* Light gray background */
+    background-color: #f6f6ef;
+    /* Light gray background */
     border-radius: 5px;
     color: #333;
 }
@@ -1257,16 +1402,21 @@ border-width: 2px !important;
     font-size: 10.5px;
     line-height: 1.4;
     padding: 5px !important;
-    width: 100%; /* Increase the overall width to 95% */
+    width: 100%;
+    /* Increase the overall width to 95% */
     margin-left: -102.5px !important;
     margin-right: -300px !important;
 }
 
 .hn-item {
-    margin-bottom: 10px; /* Reduce the bottom margin */
-    padding-bottom: 10px; /* Reduce the bottom padding */
-    margin-left: 5px !important; /* Remove left margin */
-    margin-right: 5px !important; /* Remove right margin */
+    margin-bottom: 10px;
+    /* Reduce the bottom margin */
+    padding-bottom: 10px;
+    /* Reduce the bottom padding */
+    margin-left: 5px !important;
+    /* Remove left margin */
+    margin-right: 5px !important;
+    /* Remove right margin */
 }
 
 .hn-title-row {
@@ -1279,8 +1429,10 @@ border-width: 2px !important;
     font-size: 13px;
     font-weight: bold;
     text-decoration: none !important;
-    display: block; /* ensure title occupies its own line */
-        text-align: left !important; /* Aligns the title to the left */
+    display: block;
+    /* ensure title occupies its own line */
+    text-align: left !important;
+    /* Aligns the title to the left */
 
 }
 
@@ -1293,7 +1445,8 @@ border-width: 2px !important;
     color: #d9d9d9;
     font-size: 10.5px;
     margin-top: 2px;
-        text-align: left !important; /* Aligns the details to the left */
+    text-align: left !important;
+    /* Aligns the details to the left */
 
 }
 
@@ -1305,11 +1458,13 @@ border-width: 2px !important;
 
 .hn-comments:hover {
     color: #ffbb8d;
-    border-bottom: 1px solid #ffbb8d; /* solid underline on hover */
+    border-bottom: 1px solid #ffbb8d;
+    /* solid underline on hover */
 }
 
 .hn-url {
-    font-style: normal; /* base url with no special styling */
+    font-style: normal;
+    /* base url with no special styling */
     font-size: 10.5px;
     color: #d9d9d9;
     text-decoration: none;
@@ -1317,10 +1472,13 @@ border-width: 2px !important;
 
 .posts-icon {
     display: block;
-    margin: 0 auto; /* Center align the image */
-    height: 45px; /* Adjust based on your preference */
+    margin: 0 auto;
+    /* Center align the image */
+    height: 45px;
+    /* Adjust based on your preference */
     width: 90px;
-    padding-bottom: 10px; /* Space below the image */
+    padding-bottom: 10px;
+    /* Space below the image */
     z-index: -1;
 }
 
@@ -1330,36 +1488,46 @@ border-width: 2px !important;
 -----------------------*/
 
 textarea#userInput {
-    line-height: 20px; /* Adjust this based on your styling */
+    line-height: 20px;
+    /* Adjust this based on your styling */
     height: 20px;
-    width: 460px; /* Adjust width to avoid hanging out of modal */
-    padding: 7px; /* Padding for some space inside the borders */
+    width: 460px;
+    /* Adjust width to avoid hanging out of modal */
+    padding: 7px;
+    /* Padding for some space inside the borders */
     font-family: calibri;
-    font-size: 13.5px; /* Adequate font size for readability */
+    font-size: 13.5px;
+    /* Adequate font size for readability */
     color: white;
-    background: rgb(88,0,47);
-    background: radial-gradient(circle, rgba(88,0,47,1) 0%, rgba(60,0,34,1) 100%); 
+    background: rgb(88, 0, 47);
+    background: radial-gradient(circle, rgba(88, 0, 47, 1) 0%, rgba(60, 0, 34, 1) 100%);
     margin-top: 11px;
     margin-left: 10px;
     margin-bottom: -14.5px;
-    resize: none; /* Disable manual resizing */
-    overflow-y: hidden; /* Hide vertical scrollbar */
+    resize: none;
+    /* Disable manual resizing */
+    overflow-y: hidden;
+    /* Hide vertical scrollbar */
 }
 
 /* Auto-grow the textarea when user types */
 textarea#userInput {
     overflow: hidden;
-    max-height: 1000px !important; /* Maximum height before scrollbar appears */
+    max-height: 1000px !important;
+    /* Maximum height before scrollbar appears */
 }
 
 textarea#userInput:focus {
-    outline: none; /* Removes outline on focus */
+    outline: none;
+    /* Removes outline on focus */
 }
 
 #userInput::placeholder {
-    color: #bebebef1;  /* Sets the color of the placeholder text */
+    color: #bebebef1;
+    /* Sets the color of the placeholder text */
     font-family: Calibri;
-    font-size: 12.5px; /* Sets the size of the font */
+    font-size: 12.5px;
+    /* Sets the size of the font */
 }
 
 
@@ -1370,76 +1538,98 @@ textarea#userInput:focus {
     justify-content: center;
     padding: 10px 15px;
     position: relative;
-    background-color: #007bff; /* Button background color*/
-    color: white; /* Button text color */
-    cursor: pointer; /* Pointer cursor on hover */
+    background-color: #007bff;
+    /* Button background color*/
+    color: white;
+    /* Button text color */
+    cursor: pointer;
+    /* Pointer cursor on hover */
 }
 
 .chatgpt-icon {
-    width: 16.5px; /* Adjust the size as needed */
-    height: 16.5px; /* Adjust the size as needed */
+    width: 16.5px;
+    /* Adjust the size as needed */
+    height: 16.5px;
+    /* Adjust the size as needed */
     margin-bottom: 3px !important;
-    margin-left: 3px; /* Space between text and icon */
+    margin-left: 3px;
+    /* Space between text and icon */
 }
 
 .scrape-icon {
-    width: 16.5px !important; /* Adjust the size as needed */
-    height: 16.5px !important; /* Adjust the size as needed */
+    width: 16.5px !important;
+    /* Adjust the size as needed */
+    height: 16.5px !important;
+    /* Adjust the size as needed */
     margin-bottom: 2.5px;
-    margin-left: 3.5px; /* Space between text and icon */
+    margin-left: 3.5px;
+    /* Space between text and icon */
 }
 
 /* Style for the send button */
 #sendButton {
     height: 32.25px;
     max-width: 11.75% !important;
-background: radial-gradient(circle, rgba(0,178,255,1) 0%, rgba(0,213,255,1) 100%);
-    color: black; /* White text */
-    font-size: 12px !important; /* Match font size with input */
+    background: radial-gradient(circle, rgba(0, 178, 255, 1) 0%, rgba(0, 213, 255, 1) 100%);
+    color: black;
+    /* White text */
+    font-size: 12px !important;
+    /* Match font size with input */
     font-weight: bold !important;
-    border-radius: 1px; /* Rounded corners */
+    border-radius: 1px;
+    /* Rounded corners */
     border-color: #636363;
-    cursor: pointer; /* Pointer cursor on hover */
+    cursor: pointer;
+    /* Pointer cursor on hover */
     /* margin-left: 80px; Space between button and input box */
     margin-right: -400px;
 }
 
 #sendButton:hover {
     color: white;
-background: radial-gradient(circle, rgba(0,191,255,1) 0%, rgba(0,140,255,1) 100%);
+    background: radial-gradient(circle, rgba(0, 191, 255, 1) 0%, rgba(0, 140, 255, 1) 100%);
 }
 
 .modal-content {
-    min-width: 80%; /* Adjust based on your layout needs */
+    min-width: 80%;
+    /* Adjust based on your layout needs */
 }
 
 /* Style for the response area */
 #responseArea {
     width: 530px;
-    line-height: 20px; /* Adjust this based on your styling */
+    line-height: 20px;
+    /* Adjust this based on your styling */
     height: 25px;
-    max-height: 450px; /* Set maximum height for the response area */
+    max-height: 450px;
+    /* Set maximum height for the response area */
     font-family: Calibri;
     margin-bottom: 10px;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 13px !important; /* Legible font size */
-color: rgb(0, 0, 0);
-    overflow-y: auto; /* Allow vertical scrolling */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
+    font-size: 13px !important;
+    /* Legible font size */
+    color: rgb(0, 0, 0);
+    overflow-y: auto;
+    /* Allow vertical scrolling */
+    overflow-x: hidden;
+    /* Prevents horizontal scrolling */
 }
 
 .response-area {
     font-family: calibri;
-    font-size: 13.5px; /* Adequate font size for readability */
+    font-size: 13.5px;
+    /* Adequate font size for readability */
     color: white;
-    background: rgb(88,0,47);
-    background: radial-gradient(circle, rgba(88,0,47,1) 0%, rgba(60,0,34,1) 100%); 
+    background: rgb(88, 0, 47);
+    background: radial-gradient(circle, rgba(88, 0, 47, 1) 0%, rgba(60, 0, 34, 1) 100%);
     padding: 7px;
     margin-top: 7.5px !important;
-    overflow: auto; /* Enable scrolling if content overflows */
-    max-height: 50vh; /* Maximum height as a percentage of the viewport height */
-    transition: height 0.2s ease-out; /* Smooth transition for height changes */
+    overflow: auto;
+    /* Enable scrolling if content overflows */
+    max-height: 50vh;
+    /* Maximum height as a percentage of the viewport height */
+    transition: height 0.2s ease-out;
+    /* Smooth transition for height changes */
 }
-

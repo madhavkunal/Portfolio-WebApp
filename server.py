@@ -3,7 +3,7 @@ import requests
 import feedparser
 import openai
 import logging
-from flask import Flask, render_template, request, jsonify, send_from_directory
+from flask import Flask, render_template, request, jsonify, send_from_directory, url_for
 from flask_cors import CORS
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
@@ -98,20 +98,25 @@ def api_openai():
     else:
         return jsonify({'error': 'Failed to get response from OpenAI'}), 500
 
-
-
-# Medium Blog Posts Page Route
-@app.route("/get-medium-posts", methods=['GET'])
-def get_medium_posts():
-    MEDIUM_USERNAME = 'Madhav_Kunal'
-    feed_url = f"https://medium.com/feed/@{MEDIUM_USERNAME}"
-    feed = feedparser.parse(feed_url)
+# Substack Blog Posts Page Route
+@app.route("/get-substack-posts", methods=['GET'])
+def get_substack_posts():
+    SUBSTACK_USERNAME = 'madhavkunal'
+    feed_url = f"https://{SUBSTACK_USERNAME}.substack.com/feed"
+    response = requests.get(feed_url)
+    feed = feedparser.parse(response.content)
     post_data = []
+    default_image_url = url_for('static', filename='img/substack/Substack.png', _external=True)
+
     for post in feed.entries:
-        soup = BeautifulSoup(post.summary, features="html.parser")
+        soup = BeautifulSoup(post.content[0].value, features="html.parser")  # Ensure you're parsing the correct part of the feed
+        
         image_tag = soup.find('img')
-        image_url = image_tag['src'] if image_tag else 'path_to_default_image.jpg'
-        content_snippet = soup.text[:460] + ' ... ' if len(soup.text) > 460 else soup.text
+        image_url = image_tag['src'] if image_tag else default_image_url
+
+        content_text = soup.get_text()
+        content_snippet = content_text[:445] + ' ...' if len(content_text) > 450 else content_text
+        
         post_data.append({
             'title': post.title,
             'date': post.published,
@@ -119,6 +124,7 @@ def get_medium_posts():
             'url': post.link,
             'imageUrl': image_url
         })
+
     return jsonify(post_data)
 
 # Static Routes and Main App Configuration
