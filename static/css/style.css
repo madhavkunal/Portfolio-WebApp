@@ -590,37 +590,116 @@ a:hover {
     /* Ensures it's centered from the top */
 }
 
+/* Affiliate Image Links */
 
-.product-ad {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    max-width: 600px;
-    /* Set a max-width for large screens */
-    text-align: right;
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: -65px;
 }
 
-@media (max-width: 1200px) {
-    .product-ad {
-        width: 80%;
-        /* Adjust for medium screens */
-        max-width: 600px;
-        /* Set a max-width for medium screens */
-    }
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-@media (max-width: 768px) {
-    .product-ad {
+.product-ad,
+.product-ad2,
+.product-ad3 {
+    background-color: white;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-ad:hover,
+.product-ad2:hover,
+.product-ad3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-ad img,
+.product-ad2 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Large screens */
+@media (min-width: 1201px) {
+    .left-column {
         width: 90%;
-        /* Adjust for small screens */
-        margin-left: 5%;
-        text-align: center;
-        /* Center align for smaller screens */
-        max-width: 600px;
-        /* Set a max-width for small screens */
+        margin-right: -70px;
+    }
+
+    .product-ad,
+    .product-ad2 {
+        width: 90%;
+        margin-right: -70px;
+
+    }
+
+    .right-column {
+        width: 79%;
+    }
+
+    .product-ad3 {
+        width: 79%;
     }
 }
 
+/* Medium screens */
+@media (min-width: 1201px) {
+    .left-column {
+        width: 90%;
+        margin-right: -70px;
+    }
+
+    .product-ad,
+    .product-ad2 {
+        width: 90%;
+        margin-right: -70px;
+
+    }
+
+    .right-column {
+        width: 79%;
+    }
+
+    .product-ad3 {
+        width: 79%;
+    }
+}
+
+/* Small screens */
+@media (min-width: 1201px) {
+    .left-column {
+        width: 90%;
+        margin-right: -70px;
+    }
+
+    .product-ad,
+    .product-ad2 {
+        width: 90%;
+        margin-right: -70px;
+
+    }
+
+    .right-column {
+        width: 79%;
+    }
+
+    .product-ad3 {
+        width: 79%;
+    }
+}
 
 /*---------------------
     Blog
