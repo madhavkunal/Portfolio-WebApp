@@ -590,16 +590,37 @@ a:hover {
     /* Ensures it's centered from the top */
 }
 
-@media (max-width: 768px) {
-    .carousel-item img {
-        height: 300px;
-        /* Smaller fixed height for smaller screens */
-    }
 
-    .carousel-container {
-        height: 320px;
+.product-ad {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    max-width: 600px;
+    /* Set a max-width for large screens */
+    text-align: right;
+}
+
+@media (max-width: 1200px) {
+    .product-ad {
+        width: 80%;
+        /* Adjust for medium screens */
+        max-width: 600px;
+        /* Set a max-width for medium screens */
     }
 }
+
+@media (max-width: 768px) {
+    .product-ad {
+        width: 90%;
+        /* Adjust for small screens */
+        margin-left: 5%;
+        text-align: center;
+        /* Center align for smaller screens */
+        max-width: 600px;
+        /* Set a max-width for small screens */
+    }
+}
+
 
 /*---------------------
     Blog
